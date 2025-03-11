@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-c-deploy
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pod-c
+  template:
+    metadata:
+      labels:
+        app: pod-c
+    spec:
+      containers:
+        - name: pod-c
+          image: rajatbadola/service-c:latest
+          ports:
+            - containerPort: 5002
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-c
+  namespace: default
+spec:
+  selector:
+    app: pod-c
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5002
