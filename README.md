@@ -99,6 +99,21 @@ You can:
 
 ---
 
+## Sample Distributed Trace (Zipkin)
+
+The screenshot below shows a **single request trace captured in Zipkin**, demonstrating
+end-to-end request flow across all three microservices.
+
+The trace highlights:
+
+* Root span created in **Service A**
+* Downstream calls to **Service B** and **Service C**
+* Proper parent-child span relationships
+* Latency contribution of each service
+
+![Zipkin Distributed Trace](docs/zipkinTrace.png)
+
+---
 ## Learning Outcomes
 
 This project demonstrates:
