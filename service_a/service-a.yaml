@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: pod-a
-          image: rajatbadola/service-a:latest
+          image: rajatbadola/service-a-otel:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
 ---

@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: pod-b
-          image: rajatbadola/service-b:latest
+          image: rajatbadola/service-b-otel:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5001
 ---

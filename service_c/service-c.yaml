@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: pod-c
-          image: rajatbadola/service-c:latest
+          image: rajatbadola/service-c-otel:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5002
 ---
