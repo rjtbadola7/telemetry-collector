@@ -54,7 +54,7 @@ Zipkin
 
 ## Tech Stack
 
-* **Language**: Go
+* **Language**: Python
 * **Tracing**: OpenTelemetry SDK
 * **Telemetry Backend**: Zipkin
 * **Collector**: OpenTelemetry Collector
